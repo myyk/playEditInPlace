@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Edit In Place</title>
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+    </head>
+    <body>
+        <div class="edit" id="div_1">Dolor</div>
+        
+        <script src="@routes.Assets.at("javascripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascript/jquery.jeditable.js")" type="text/javascript"></script>
+
+        <script type="text/javascript" charset="utf-8">
+          $(function() {
+            $(".edit").editable("/", {
+              type   : 'textarea',
+              submit : 'Save',
+              cancel : 'Discard'
+            });
+          });
+        </script>
+    </body>
+</html>
